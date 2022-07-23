@@ -1,6 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        padding: 2rem;
+        font-family: 'Rubik', sans-serif;
+
+        background-color: #f6f6f6;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23eaf0f1' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23dfebec' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23d3e5e7' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23c8e0e3' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23bcdade' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23b1d5d9' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23a5cfd4' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+        /* background by SVGBackgrounds.com */
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+
+        color: #181d25;
+        min-height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 2.5rem;
+        border: 3px solid #f6f6f6;
+        box-shadow: 0px 16px 40px rgba(63, 191, 191, 0.8);
+        box-sizing: content-box;
+      }
+
+      header {
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      header p {
+        font-weight: 300;
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+        color: #525252;
+      }
+
+      header h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 85%;
+      }
+
+      nav {
+        width: 100%;
+        display: block;
+        max-width: 380px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.25rem;
+        color: #fff;
+
+        box-shadow: 0px 0.5rem 1.5rem -0.25rem var(--link-color);
+        background-color: var(--link-color);
+
+        transition: box-shadow 0.5s;
+      }
+
+      a:hover {
+        box-shadow: 0px 0.5rem 1.5rem 0rem var(--link-color);
+      }
+
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      #linkedin {
+        --link-color: #0e76a8;
+      }
+
+      #spotify {
+        --link-color: #1db954;
+      }
+
+      #github {
+        --link-color: #24292e;
+      }
+
+      #instagram {
+        --link-color: #e1206c;
+      }
+
+      #email {
+        --link-color: #e1203a;
+      }
+
+      #twitter {
+        --link-color: #1da1f2;
+      }
+
+      #portfolio {
+        --link-color: #673ab7;
+      }
+
+      #blog {
+        --link-color: #673ab7;
+      }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -16,27 +150,108 @@
       gtag('config', 'G-C1ZH05MYGL');
     </script>
     <!-- END OF Global site tag (gtag.js) - Google Analytics -->
-
-    <!-- Start of OG for Sharing -->
-    <meta property="og:title" content="Laura Ortega - Instagram" />
-    <meta property="og:url" content="LauraOrtega.com" />
-    <meta property="og:type" content="music.song" />
-    <meta property="og:music.song" content="Laura Ortega" />
-    <!-- <meta property="og:music.album" content="Laura Ortega" /> -->
-    <meta property="og:description" content="Laura Ortega" />
-    <meta property="og:image" content="" alt="Laura Ortega" />
-    <!-- End of OG for Sharing -->
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta
-      http-equiv="refresh"
-      content="1; url = https://youtu.be/dQw4w9WgXcQ"
-    /> -->
-    <title>Laura Ortega</title>
+    <meta name="theme-color" content="#00BCD4" />
+    <title>Lau Ortega</title>
+
+    <meta name="description" content="Laura Ortega" />
+
+    <meta itemprop="name" content="LauOrtega.com" />
+    <meta itemprop="description" content="Laura Ortega" />
+    <meta itemprop="image" content="" />
+
+    <meta property="og:title" content="Laura Ortega" />
+    <meta property="og:description" content="Laura Ortega" />
+    <meta property="og:site_name" content="Lau Ortega" />
+    <meta property="og:url" content="https://LauOrtega.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://i.scdn.co/image/ab676161000051743e9ab967ad41ecb282a9b090"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <!-- <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="700" /> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
   <body>
-    Hello World!
+    <img
+      src="https://i.scdn.co/image/ab676161000051743e9ab967ad41ecb282a9b090"
+      width="460"
+      height="460"
+      alt="Laura Ortega"
+    />
+
+    <header>
+      <h1>Laura Ortega</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li id="instagram">
+          <a href="https://lauortega.com/insta">
+            <i class="fab fa-instagram"></i>
+            Instagram
+          </a>
+        </li>
+        <li id="github">
+          <a href="https://lauortega.com/tiktok">
+            <i class="fab fa-tiktok"></i>
+            Tiktok
+          </a>
+        </li>
+        <!-- <li id="linkedin">
+          <a href="">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+        </li> -->
+        <li id="spotify">
+          <a href="https://lauortega.com/playlist">
+            <i class="fab fa-spotify"></i>
+            Spotify
+          </a>
+        </li>
+        <li id="twitter">
+          <a href="https://twitter.com/__lauraortega">
+            <i class="fab fa-twitter"></i>
+            Twitter
+          </a>
+        </li>
+        <li id="email">
+          <a href="mailto:management@lauortega.com">
+            <i class="fas fa-envelope"></i>
+            Email
+          </a>
+        </li>
+        <!-- 
+        <li id="portfolio">
+          <a href="">
+            <i class="fas fa-code"></i>
+            Portfólio
+          </a>
+        </li>
+        <li id="blog">
+          <a href="">
+            <i class="fas fa-book"></i>
+            Blog
+          </a>
+        </li> -->
+      </ul>
+    </nav>
   </body>
 </html>

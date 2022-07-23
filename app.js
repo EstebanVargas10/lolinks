@@ -10,12 +10,17 @@ app.get('/', (req, res) => {
 });
 
 // Socials
-app.get('/Insta', (req, res) => {
+
+app.get('/playlist', (req, res) => {
+  res.sendFile(__dirname + '/pages/playlist.html');
+});
+
+app.get('/insta', (req, res) => {
   res.sendFile(__dirname + '/pages/Insta.html');
 });
 
-app.get('/Instagram', (req, res) => {
-  res.sendFile(__dirname + '/pages/Insta.html');
+app.get('/instagram', (req, res) => {
+  res.sendFile(__dirname + '/pages/insta.html');
 });
 
 app.get('/tiktok', (req, res) => {
@@ -26,8 +31,3 @@ app.get('/tiktok', (req, res) => {
 // app.get('/deploy', (req, res) => {
 //   res.sendFile(__dirname + '/pages/deploy.html');
 // });
-
-// Handling non matching request from the client
-app.use((req, res, next) => {
-  res.sendFile(__dirname + '/pages/tiktok.html');
-});
