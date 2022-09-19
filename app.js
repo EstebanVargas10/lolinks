@@ -27,6 +27,10 @@ app.get('/tiktok', (req, res) => {
   res.sendFile(__dirname + '/pages/tiktok.html');
 });
 
+app.get('/youtube', (req, res) => {
+  res.sendFile(__dirname + '/pages/youtube.html');
+});
+
 // // Config
 // app.get('/deploy', (req, res) => {
 //   res.sendFile(__dirname + '/pages/deploy.html');
