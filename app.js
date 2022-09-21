@@ -9,6 +9,16 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/pages/index.html');
 });
 
+// Songs
+
+app.get('/KARMA', (req, res) => {
+  res.sendFile(__dirname + '/pages/KARMA.html');
+});
+
+app.get('/KARMAPreSave', (req, res) => {
+  res.sendFile(__dirname + '/pages/KARMAPreSave.html');
+});
+
 // Socials
 
 app.get('/playlist', (req, res) => {
