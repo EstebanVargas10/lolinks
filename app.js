@@ -21,12 +21,16 @@ app.get('/KARMAPreSave', (req, res) => {
 
 // Socials
 
-app.get('/playlist', (req, res) => {
-  res.sendFile(__dirname + '/pages/playlist.html');
+app.get('/spotify', (req, res) => {
+  res.sendFile(__dirname + '/pages/spotify.html');
+});
+
+app.get('/apple', (req, res) => {
+  res.sendFile(__dirname + '/pages/apple.html');
 });
 
 app.get('/insta', (req, res) => {
-  res.sendFile(__dirname + '/pages/Insta.html');
+  res.sendFile(__dirname + '/pages/insta.html');
 });
 
 app.get('/instagram', (req, res) => {
